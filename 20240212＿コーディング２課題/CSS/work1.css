@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+/* header  */
+
+.header_title {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+.header_nav ul {
+    display: flex;
+}
+
+.header_nav ul li {
+    padding: 5px 30px;
+    font-size: 14px;
+    border-right: 1px solid #4c4c4c;
+}
+
+.header_nav ul li:last-child {
+    border: none;
+}
+
+/* 青　四角形 */
+
+.box-area1 {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    /* gap: 30px; */
+    justify-content: space-around;
+}
+
+.blue_box1 {
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+}
+
+.blue_box2 {
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+}
+
+.blue_box3 {
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+}
+
+/* 赤　四角形 */
+
+.box-area2 {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 30px; */
+    justify-content: space-around;
+}
+
+.red_box1 {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+}
+
+.red_box2 {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+}
+
+.red_box3 {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+}
+
+.red_box4 {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+}
+
+.red_box5 {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+}
+
+.red_box6 {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+}
