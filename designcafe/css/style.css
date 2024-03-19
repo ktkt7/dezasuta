@@ -14,7 +14,7 @@
     width: 100%;
     box-sizing: border-box;
     /* 要素を最前面に持ってくる */
-    z-index: 9999;
+    z-index: 9997;
 }
 
 .header-nav ul {
@@ -131,7 +131,6 @@ main {
 /* menu */
 
 .menu {
-    padding-top: 108px;
     padding: 108px 10px 0px 10px;
     margin: 0 auto;
 }
@@ -166,6 +165,10 @@ main {
     letter-spacing: 0.1em;
     font-weight: medium;
     text-align: justify;
+}
+
+.sp-menu_wrap {
+    display: none;
 }
 
 /* gallery */
@@ -234,6 +237,7 @@ main {
 .access iframe {
     filter: grayscale(100%) invert(92%) contrast(83%);
     width: 100%;
+    vertical-align: bottom;
 }
 
 /* footer */
@@ -264,4 +268,344 @@ main {
     bottom: 20px;
     right: 20px;
     width: 125px;
+}
+
+/* sp版 */
+
+.sp-menu-btn,
+.sp-header-nav {
+    display: none;
+}
+
+.sp-br {
+    display: none;
+}
+
+.title-sp {
+    display: none;
+}
+
+/* 1100px */
+@media screen and (max-width: 1100px) {
+    .header-nav {
+        display: none;
+    }
+
+    /* ハンバーガーメニュー */
+    .sp-menu-btn {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        z-index: 9999;
+    }
+
+    .sp-menu-btn span {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        top: 15px;
+        transition: 0.5s;
+    }
+
+    .sp-menu-btn span::before {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        top: -11px;
+        transition: 0.5s;
+    }
+
+    .sp-menu-btn span::after {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        bottom: -11px;
+        transition: 0.5s;
+    }
+
+    /* hamメニューが開いた時 */
+    .open span {
+        /* 色の無効化 */
+        background-color: transparent;
+    }
+
+    .open span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .open span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .sp-header-nav {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: #121212c1;
+        z-index: 9998;
+    }
+
+    .sp-header-nav ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sp-header-nav li {
+        color: #fff;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+            "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+        font-weight: bold;
+    }
+
+    .text_en {
+        font-size: 29px;
+    }
+
+    .text_ja {
+        font-size: 70px;
+    }
+
+    .text_sub {
+        font-size: 20px;
+    }
+
+    .about_maintext {
+        font-size: 37px;
+    }
+
+    .about_subtext {
+        font-size: 14px;
+    }
+}
+
+/* 767px */
+
+@media screen and (max-width: 767px) {
+    /* title*/
+    .title img {
+        display: none;
+    }
+
+    .title {
+        display: none;
+    }
+
+    .title-sp img {
+        height: 45px;
+        max-width: none;
+    }
+
+    .title-sp {
+        display: block;
+    }
+
+    .slider img {
+        width: 100%;
+    }
+
+    /* message */
+    .message {
+        text-align: center;
+        padding: 40px 0px 66px 0px;
+        margin: 0 auto;
+    }
+
+    .text_en {
+        font-size: 17px;
+        font-weight: medium;
+        padding-bottom: 0px;
+    }
+
+    .text_ja {
+        font-size: 38px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+        font-weight: medium;
+    }
+
+    .text_sub {
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.1em;
+        font-weight: medium;
+        padding-top: 20px;
+    }
+
+    .sp-br {
+        display: inline;
+    }
+
+    /* about_us */
+
+    .about_us {
+        display: block;
+        align-items: center;
+        padding: 0px;
+        margin: 0 auto;
+    }
+
+    .about_us h2 {
+        text-align: center;
+    }
+
+    .aboutus_img {
+        margin: 0 auto;
+        padding: 0px;
+    }
+
+    .aboutus_img img {
+        width: 100%;
+        border-bottom-right-radius: 0px;
+        margin: 0 auto;
+        padding: 0px;
+    }
+
+    .aboutus_contents {
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .about_maintext {
+        font-size: 36px;
+        line-height: 1.25;
+        font-weight: medium;
+        padding: 0px 10px 18px 10px;
+    }
+
+    .about_subtext {
+        font-size: 16px;
+        line-height: 1.75;
+        font-weight: medium;
+        text-align: left;
+        padding: 0px 10px;
+    }
+
+    /* menu */
+
+    .menu {
+        padding: 50px 10px 0px 10px;
+        margin: 0 auto;
+    }
+
+    .menu_wrap {
+        display: none;
+    }
+
+    .sp-menu_wrap {
+        display: block;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .sp-menu_detail img {
+        width: 100%;
+        border-top-right-radius: 30px;
+    }
+    .sp-menu_detail h3 {
+        color: #d30202;
+        font-size: 40px;
+        line-height: 0.55;
+        padding-left: 13px;
+        margin-top: -4px;
+        margin-bottom: 35px;
+    }
+
+    .sp-menu_text {
+        font-size: 17px;
+        line-height: 1.47;
+        letter-spacing: 0.1em;
+        font-weight: medium;
+        text-align: justify;
+    }
+
+    .sp-menu_detail {
+        padding-bottom: 70px;
+    }
+
+    /* gallery */
+    .gallery {
+        padding-top: 0px;
+        margin: 0;
+    }
+
+    /* event */
+
+    .event h2 {
+        padding-bottom: 20px;
+    }
+    .event_contents {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .event_contents p {
+        font-size: 16px;
+    }
+
+    .event {
+        padding-top: 70px;
+        padding: 35px 10px 0px 10px;
+    }
+
+    .event_wrap {
+        padding-top: 15px;
+        margin: 0 auto;
+        max-width: 300px;
+    }
+
+    .event_text {
+        margin-top: -10px;
+        text-decoration: underline;
+        text-decoration-color: #4f260b;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* access */
+    .access h2 {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+    .access iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* footer */
+
+    .footer_container {
+        max-width: 500px;
+        display: block;
+        margin: 0 auto;
+        padding: 48px 10px 46px 10px;
+    }
+
+    .cafe_contact {
+        text-align: left;
+        font-size: 18px;
+        line-height: 1.72;
+        padding: 35px 0px 0px 0px;
+    }
+
+    .to_top {
+        width: 100px;
+    }
 }

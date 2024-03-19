@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,9 @@
     <!-- css読み込み -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- jquary -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 </head>
 
@@ -32,10 +35,33 @@
                 </ul>
             </nav>
         </div>
+
+        <div class="sp-menu-btn"><span></span></div>
+
+
+        <nav class="sp-header-nav">
+            <ul>
+                <li><a href="#About">ABOUT US</a></li>
+                <li><a href="#Menu">MENU</a></li>
+                <li><a href="#Gallery">GALLERY</a></li>
+                <li><a href="#Event">EVENT</a></li>
+                <li><a href="#Access">ACCESS</a></li>
+            </ul>
+
+        </nav>
+
+
         <!-- メインビジュアル -->
         <div class="slider">
-            <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子">
+            <picture>
+
+                <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+                <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子">
+
+
+            </picture>
         </div>
+
     </header>
 
     <!-- メイン -->
@@ -47,16 +73,22 @@
             <section class="message">
                 <p class="text_en">Have a happy day From a cup of coffee.</p>
                 <p class="text_ja">ハッピーに溢れる1日を<br />1杯のコーヒーから。</p>
-                <p class="text_sub">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br />
-                    足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
+                <p class="text_sub">毎日を丁寧に大切に過ごしたい。<br class="sp-br" />だからこそ一杯一杯丁寧にコーヒーを入れ<br />
+                    足を運んでくれるお客さんには落ち着く空間と<br class="sp-br" />こだわりのコーヒーを提供したい。</p>
 
             </section>
 
             <!-- about us -->
             <section class="about_us" id="About">
+                <h2 class="title-sp">
+                    <img src="./images/about_us@2x.png" alt="私たちについて">
+                </h2>
 
                 <p class="aboutus_img">
-                    <img src="./images/pc_about-100.jpg" alt="コーヒーのイメージ">
+                    <picture>
+                        <source srcset="./images/about_us@2x-100.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_about-100.jpg" alt="コーヒーのイメージ">
+                    </picture>
                 </p>
 
                 <div class="aboutus_contents">
@@ -74,22 +106,48 @@
 
             <!-- menu -->
             <section class="menu" id="Menu">
+
                 <h2 class="title">
                     <img src="./images/menu@2x.png" alt="メニュー">
                 </h2>
+                <h2 class="title-sp">
+                    <img src="./images/menu@2x.png" alt="メニュー">
+                </h2>
+
+
                 <div class="menu_wrap">
 
                     <div class="menu_detail">
-                        <img src="./images/drink_sp@2x-100.jpg" alt="ドリンクのイメージ">
+                        <img src="./images/pc_menu_drink-100.jpg" alt="ドリンクのイメージ">
                         <h3>Drink</h3>
                         <p class="menu_text">ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
                     </div>
                     <div class="menu_detail">
-                        <img src="./images/food_sp@2x-100.jpg" alt="フードのイメージ">
+                        <img src="./images/pc_menu_food-100.jpg" alt="フードのイメージ">
                         <h3>Food</h3>
                         <p class="menu_text">フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
                     </div>
                     <div class="menu_detail">
+                        <img src="./images/pc_menu_sweets-100.jpg" alt="スイートのイメージ">
+                        <h3>Sweets</h3>
+                        <p class="menu_text">スイーツメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
+
+                    </div>
+                </div>
+
+                <div class="sp-menu_wrap">
+
+                    <div class="sp-menu_detail">
+                        <img src="./images/drink_sp@2x-100.jpg" alt="ドリンクのイメージ">
+                        <h3>Drink</h3>
+                        <p class="menu_text">ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
+                    </div>
+                    <div class="sp-menu_detail">
+                        <img src="./images/food_sp@2x-100.jpg" alt="フードのイメージ">
+                        <h3>Food</h3>
+                        <p class="menu_text">フードメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
+                    </div>
+                    <div class="sp-menu_detail">
                         <img src="./images/cake_sp@2x-100.jpg" alt="スイートのイメージ">
                         <h3>Sweets</h3>
                         <p class="menu_text">スイーツメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
@@ -108,6 +166,12 @@
             <h2 class="title">
                 <img src="./images/gallery@2x.png" alt="ギャラリー">
             </h2>
+
+            <h2 class="title-sp">
+                <img src="./images/gallery@2x.png" alt="ギャラリー">
+            </h2>
+
+
             <div class="gallery_img">
                 <div class="gallery_img1">
                     <img src="./images/pc_gallary_05-100.jpg" alt="店内イメージ">
@@ -136,6 +200,12 @@
                 <h2 class="title">
                     <img src="./images/event@2x.png" alt="イベント">
                 </h2>
+
+                <h2 class="title-sp">
+                    <img src="./images/event@2x.png" alt="イベント">
+                </h2>
+
+
                 <div class="event_box">
                     <ul class="event_wrap">
                         <li class="event_contents">
@@ -165,6 +235,10 @@
             <h2 class="title">
                 <img src="./images/access@2x.png" alt="アクセス">
             </h2>
+            <h2 class="title-sp">
+                <img src="./images/access@2x.png" alt="アクセス">
+            </h2>
+
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31193.355186912388!2d139.6713031540084!3d35.73343942870722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d8195b1d49b%3A0x6fd056c83bbcc011!2zVGhlIEJ1enogU2hpc2hhIOOCt-ODvOOCt-ODoyDjgqvjg5XjgqfvvIbjg5Djg7w!5e0!3m2!1sja!2sjp!4v1709976608451!5m2!1sja!2sjp"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -199,6 +273,15 @@
         </p>
 
     </footer>
+
+    <script>
+        $(function () {
+            $(".sp-menu-btn").on("click", function () {
+                $(".sp-menu-btn").toggleClass("open");
+                $(".sp-header-nav").fadeToggle();
+            });
+        });
+    </script>
 
 
 </body>
